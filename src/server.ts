@@ -5,6 +5,7 @@ import { appRoutes } from "./routes";
 const app = Fastify();
 
 app.register(cors);
+
 app.register(appRoutes);
 
 app.get("/version", () => {
