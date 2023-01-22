@@ -8,15 +8,10 @@ app.register(cors);
 
 app.register(appRoutes);
 
-app.get("/version", () => {
-  return {
-    version: process.env.npm_package_version,
-  };
-});
-
 app
   .listen({
     port: 3333,
+    host: "0.0.0.0",
   })
   .then(() => {
     console.log("HTTP Server running on port " + 3333);

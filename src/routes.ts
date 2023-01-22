@@ -144,4 +144,10 @@ export async function appRoutes(app: FastifyInstance) {
 
     return summary;
   });
+
+  app.get("/version", () => {
+    return {
+      version: process.env.npm_package_version,
+    };
+  });
 }
